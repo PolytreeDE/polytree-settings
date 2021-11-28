@@ -1,0 +1,16 @@
+[package]
+name = "polytree-settings"
+version = "0.0.0"
+authors = ["Alex Kotov <kotovalexarian@gmail.com>"]
+edition = "2021"
+description = "Polytree settings"
+readme = false
+homepage = "https://github.com/PolytreeWM/polytree-settings"
+repository = "https://github.com/PolytreeWM/polytree-settings.git"
+license = "MIT"
+keywords = ["gui"]
+categories = ["gui"]
+publish = true
+
+[dependencies]
+gtk = "0.14.3"
