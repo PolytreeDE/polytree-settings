@@ -13,4 +13,4 @@ categories = ["gui"]
 publish = true
 
 [dependencies]
-gtk = "0.14.3"
+gtk = { package = "gtk4", version = "0.3.1" }

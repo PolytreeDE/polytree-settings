@@ -12,16 +12,10 @@ fn main() {
 }
 
 fn build_ui(app: &Application) {
-    let window = ApplicationWindow::new(app);
+    let window = ApplicationWindow::builder()
+        .application(app)
+        .title("Hello, World!")
+        .build();
 
-    window.set_title("Polytree settings");
-    window.set_border_width(10);
-    window.set_position(WindowPosition::Center);
-    window.set_default_size(350, 70);
-
-    let button = Button::with_label("Press me!");
-
-    window.add(&button);
-
-    window.show_all();
+    window.present();
 }
