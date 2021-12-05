@@ -1,3 +1,5 @@
+use crate::glib::clone;
+
 use std::cell::Cell;
 use std::rc::Rc;
 
@@ -28,9 +30,6 @@ fn build_ui(app: &Application) {
         .margin_end(12)
         .build();
 
-    let label1 = label.clone();
-    let label2 = label.clone();
-
     let button1 = Button::builder()
         .label("Increase")
         .margin_top(12)
@@ -47,17 +46,16 @@ fn build_ui(app: &Application) {
         .margin_end(12)
         .build();
 
-    let number1 = Rc::new(Cell::new(0));
-    let number2 = number1.clone();
+    let number = Rc::new(Cell::new(0));
 
-    button1.connect_clicked(move |_| {
-        number1.set(number1.get() + 1);
-        label1.set_label(&number1.get().to_string());
-    });
-    button2.connect_clicked(move |_| {
-        number2.set(number2.get() - 1);
-        label2.set_label(&number2.get().to_string());
-    });
+    button1.connect_clicked(clone!(@weak number, @weak label => move |_| {
+        number.set(number.get() + 1);
+        label.set_label(&number.get().to_string());
+    }));
+    button2.connect_clicked(clone!(@weak label => move |_| {
+        number.set(number.get() - 1);
+        label.set_label(&number.get().to_string());
+    }));
 
     let box_ = Box::new(Orientation::Vertical, 0);
 
