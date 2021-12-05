@@ -1,3 +1,6 @@
+use std::cell::Cell;
+use std::rc::Rc;
+
 use gtk::prelude::*;
 use gtk::*;
 
@@ -17,19 +20,52 @@ fn build_ui(app: &Application) {
         .title("Hello, World!")
         .build();
 
-    let button = Button::builder()
-        .label("Press me!")
+    let label = Label::builder()
+        .label("0")
         .margin_top(12)
         .margin_bottom(12)
         .margin_start(12)
         .margin_end(12)
         .build();
 
-    button.connect_clicked(move |button| {
-        button.set_label("Hello, World!");
+    let label1 = label.clone();
+    let label2 = label.clone();
+
+    let button1 = Button::builder()
+        .label("Increase")
+        .margin_top(12)
+        .margin_bottom(12)
+        .margin_start(12)
+        .margin_end(12)
+        .build();
+
+    let button2 = Button::builder()
+        .label("Decrease")
+        .margin_top(12)
+        .margin_bottom(12)
+        .margin_start(12)
+        .margin_end(12)
+        .build();
+
+    let number1 = Rc::new(Cell::new(0));
+    let number2 = number1.clone();
+
+    button1.connect_clicked(move |_| {
+        number1.set(number1.get() + 1);
+        label1.set_label(&number1.get().to_string());
+    });
+    button2.connect_clicked(move |_| {
+        number2.set(number2.get() - 1);
+        label2.set_label(&number2.get().to_string());
     });
 
-    window.set_child(Some(&button));
+    let box_ = Box::new(Orientation::Vertical, 0);
+
+    box_.append(&label);
+    box_.append(&button1);
+    box_.append(&button2);
+
+    window.set_child(Some(&box_));
 
     window.present();
 }
