@@ -2,7 +2,7 @@ use gtk::prelude::*;
 use gtk::*;
 
 static ID: &str = "com.causa-arcana.polytree.polytree-session";
-static UI: &str = include_str!("../main.glade");
+static UI: &str = include_str!("../main.ui");
 
 fn main() {
     let app = Application::builder().application_id(ID).build();
