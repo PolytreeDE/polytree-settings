@@ -1,12 +1,8 @@
-use crate::glib::clone;
-
-use std::cell::Cell;
-use std::rc::Rc;
-
 use gtk::prelude::*;
 use gtk::*;
 
 static ID: &str = "com.causa-arcana.polytree.polytree-session";
+static UI: &str = include_str!("../main.glade");
 
 fn main() {
     let app = Application::builder().application_id(ID).build();
@@ -17,53 +13,8 @@ fn main() {
 }
 
 fn build_ui(app: &Application) {
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title("Hello, World!")
-        .build();
-
-    let label = Label::builder()
-        .label("0")
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .build();
-
-    let button1 = Button::builder()
-        .label("Increase")
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .build();
-
-    let button2 = Button::builder()
-        .label("Decrease")
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .build();
-
-    let number = Rc::new(Cell::new(0));
-
-    button1.connect_clicked(clone!(@weak number, @weak label => move |_| {
-        number.set(number.get() + 1);
-        label.set_label(&number.get().to_string());
-    }));
-    button2.connect_clicked(clone!(@weak label => move |_| {
-        number.set(number.get() - 1);
-        label.set_label(&number.get().to_string());
-    }));
-
-    let box_ = Box::new(Orientation::Vertical, 0);
-
-    box_.append(&label);
-    box_.append(&button1);
-    box_.append(&button2);
-
-    window.set_child(Some(&box_));
-
-    window.present();
+    let builder = Builder::from_string(UI);
+    let app_window: ApplicationWindow = builder.object("app_window").unwrap();
+    app_window.set_application(Some(app));
+    app_window.present();
 }
