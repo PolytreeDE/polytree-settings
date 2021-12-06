@@ -23,8 +23,8 @@
             </child>
             <child>
               <object class="GtkButton">
-                <property name="label">Save</property>
                 <property name="can_focus">True</property>
+                <property name="label">Save</property>
                 <property name="margin_end">5</property>
                 <property name="margin_start">5</property>
                 <property name="receives_default">True</property>
@@ -32,8 +32,8 @@
             </child>
             <child>
               <object class="GtkButton">
-                <property name="label">Apply</property>
                 <property name="can_focus">True</property>
+                <property name="label">Apply</property>
                 <property name="margin_end">5</property>
                 <property name="margin_start">5</property>
                 <property name="receives_default">True</property>
