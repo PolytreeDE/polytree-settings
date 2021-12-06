@@ -3,67 +3,67 @@
   <object class="GtkApplicationWindow" id="app_window">
     <child>
       <object class="GtkBox">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkBox">
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">5</property>
-            <property name="margin_end">5</property>
-            <property name="margin_start">5</property>
-            <property name="margin_top">5</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">5</property>
+            <property name="margin-end">5</property>
+            <property name="margin-start">5</property>
+            <property name="margin-top">5</property>
             <child>
               <object class="GtkLabel">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
-                <property name="margin_end">5</property>
-                <property name="margin_start">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
                 <property name="label">Default config</property>
               </object>
             </child>
             <child>
               <object class="GtkButton">
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="label">Save</property>
-                <property name="margin_end">5</property>
-                <property name="margin_start">5</property>
-                <property name="receives_default">True</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
+                <property name="receives-default">True</property>
               </object>
             </child>
             <child>
               <object class="GtkButton">
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="label">Apply</property>
-                <property name="margin_end">5</property>
-                <property name="margin_start">5</property>
-                <property name="receives_default">True</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
+                <property name="receives-default">True</property>
               </object>
             </child>
           </object>
         </child>
         <child>
           <object class="GtkNotebook">
-            <property name="can_focus">True</property>
+            <property name="can-focus">True</property>
             <property name="hexpand">True</property>
-            <property name="tab_pos">left</property>
-            <property name="show_border">False</property>
+            <property name="tab-pos">left</property>
+            <property name="show-border">False</property>
             <property name="vexpand">True</property>
             <child>
               <object class="GtkGrid">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="column-homogeneous">True</property>
                 <property name="column-spacing">5</property>
                 <property name="hexpand">True</property>
-                <property name="margin_bottom">10</property>
-                <property name="margin_end">20</property>
-                <property name="margin_start">20</property>
-                <property name="margin_top">10</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-end">20</property>
+                <property name="margin-start">20</property>
+                <property name="margin-top">10</property>
                 <property name="row-homogeneous">False</property>
                 <property name="row-spacing">5</property>
                 <property name="vexpand">False</property>
                 <child>
                   <object class="GtkLabel">
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <property name="label">Background</property>
                     <layout>
                       <property name="column">0</property>
@@ -73,7 +73,7 @@
                 </child>
                 <child>
                   <object class="GtkColorButton">
-                    <property name="can_focus">True</property>
+                    <property name="can-focus">True</property>
                     <layout>
                       <property name="column">1</property>
                       <property name="row">0</property>
@@ -82,7 +82,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <property name="label">Foreground</property>
                     <layout>
                       <property name="column">0</property>
@@ -92,7 +92,7 @@
                 </child>
                 <child>
                   <object class="GtkColorButton">
-                    <property name="can_focus">True</property>
+                    <property name="can-focus">True</property>
                     <layout>
                       <property name="column">1</property>
                       <property name="row">1</property>
@@ -103,31 +103,31 @@
             </child>
             <child>
               <object class="GtkLabel">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label">page 2</property>
               </object>
             </child>
             <child>
               <object class="GtkLabel">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label">page 3</property>
               </object>
             </child>
             <child type="tab">
               <object class="GtkLabel">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label">page 1</property>
               </object>
             </child>
             <child type="tab">
               <object class="GtkLabel">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label">page 2</property>
               </object>
             </child>
             <child type="tab">
               <object class="GtkLabel">
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label">page 3</property>
               </object>
             </child>
