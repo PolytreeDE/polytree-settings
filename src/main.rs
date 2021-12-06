@@ -14,7 +14,7 @@ fn main() {
 
 fn build_ui(app: &Application) {
     let builder = Builder::from_string(UI);
-    let app_window: ApplicationWindow = builder.object("app_window").unwrap();
+    let app_window: ApplicationWindow = builder.object("app-window").unwrap();
     app_window.set_application(Some(app));
     app_window.present();
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <object class="GtkApplicationWindow" id="app_window">
+  <object class="GtkApplicationWindow" id="app-window">
     <child>
       <object class="GtkBox">
         <property name="can-focus">False</property>
