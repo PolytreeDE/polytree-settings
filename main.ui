@@ -101,28 +101,28 @@
                 </child>
               </object>
             </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="can-focus">False</property>
-                <property name="label">This is the page #2</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="can-focus">False</property>
-                <property name="label">This is the page #3</property>
-              </object>
-            </child>
             <child type="tab">
               <object class="GtkLabel">
                 <property name="can-focus">False</property>
                 <property name="label">page #1</property>
               </object>
             </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can-focus">False</property>
+                <property name="label">This is the page #2</property>
+              </object>
+            </child>
             <child type="tab">
               <object class="GtkLabel">
                 <property name="can-focus">False</property>
                 <property name="label">page #2</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can-focus">False</property>
+                <property name="label">This is the page #3</property>
               </object>
             </child>
             <child type="tab">
